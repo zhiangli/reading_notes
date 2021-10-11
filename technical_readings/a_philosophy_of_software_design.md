@@ -24,5 +24,17 @@ John Ousterhout
     - inconsistency
     - inadequate documentation
     
-# Complexity is incremental
+## Complexity is incremental
 It makes it hard to control. Easy to convince little bit of complexity is okay
+
+# Working Code Isn't Enough
+## Tactical programming
+- Main focus is to get something working. 
+- short-sighted. 
+## Strategic programming
+- Working code is not enogh
+- Your primary goal must be to produce a great design, which also happens to work
+- Slow you down a bit in the short term but speed you up in the long term
+## How much to invest
+- Make lots of small investments on a continual basis
+- By programming tactically you are borrowing time from the future
