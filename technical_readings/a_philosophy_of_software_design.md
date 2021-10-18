@@ -82,4 +82,19 @@ When designing modules, focus on the *knowledge* that's needed to perform each t
 ## Taking it too far
 If information is needed outside the module, then you must not hide it
 
-
+# 6. General-Purpose Modules are Deeper
+## Make classes somewhat general-purpose
+The module's functionality should reflect your current needs, but its interface should not. Instead, the interface should be general enough to 
+support multiple uses.
+## Questions to ask yourself
+- What is the simplest interface that will cover all my current needs?
+Reducing the number of methods makes sense only as long as the API for each individual method stays simple
+- In how many situations will this method be used?
+If a method is designed for one particular use, this is the red flag that it may be too special-purpose
+- Is this API easy to use for my current needs?
+## Push specialization upwards (and downwards!)
+Specialized code should be cleanly separated from general-purpose code. This can be done by pushing the specialized code either up or down in
+the software stack
+- The suggestion to separate general-purpose code from special-purpose code refers to code related to a particular mechanism
+## Eliminate special cases in code
+- The best way to do this is by designing the normal case in a way that automatically handles the edge condition without any extra code
