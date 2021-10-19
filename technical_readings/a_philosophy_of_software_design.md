@@ -98,3 +98,17 @@ the software stack
 - The suggestion to separate general-purpose code from special-purpose code refers to code related to a particular mechanism
 ## Eliminate special cases in code
 - The best way to do this is by designing the normal case in a way that automatically handles the edge condition without any extra code
+
+# 7. Different Layer, Different Abstraction
+Each layer provides a different abstraction from the layer above and blow it; if you follow a single operation as it moves up and down through
+layers by invoking methods, the abstractions change with each method call.
+## Pass-through methods
+When adjacent layers have similar abstraction, the problem often manifests itself in the form of pass-through methods
+## Interface versus implementation
+- The representation used internally should be different from the abstractions that appear in the interface
+## Pass-through variables
+- force all of the intermediate methods to be aware of their existence
+- solution: introduce context object
+## Conclusion
+In order for an element to provide a net gain against complexity, it must eliminate some complexity that would be present in the absence of the
+design element. Otherwise, you are better off implementing the system without that particular element.
