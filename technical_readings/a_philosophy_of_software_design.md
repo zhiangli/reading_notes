@@ -112,3 +112,42 @@ When adjacent layers have similar abstraction, the problem often manifests itsel
 ## Conclusion
 In order for an element to provide a net gain against complexity, it must eliminate some complexity that would be present in the absence of the
 design element. Otherwise, you are better off implementing the system without that particular element.
+
+# 8. Pull Complexity Downwards
+It is more important for a module to have a simple interface than a simple implementation
+## Configuration parameters
+Configuration parameters provide an easy excuse to avoid dealing with important issues. When you do need it, see if you can provide reasonable
+default, so user will only need to provide values under exceptional conditions.
+## Taking it too far
+pulling complexity down makes sense when:
+- complexity pulled down is closely related to the class's existing functionality
+- pulling complexity down will result in simplifications elsewhere in the application
+- pulling complexity down simplifies the class's interface
+
+# 9. Better Together or Better Apart
+Two pieces of code are related:
+- share information
+- used together
+- overlap conceptually
+- hard to understand one without looking at the other
+## Bring together if information is shared
+## Bring together if it will simplify the interface
+## Bring together to eliminate duplication
+## Separate general-purpose and special-purpose code
+Special-General Mixture
+- a general-purpose mechanism also contains code specialized for a particular use of that mechanism.
+- it will make mechanism more complicated and creates information leakage between the mechanism and the particular usage
+## Splitting and joining methods
+- In general, developers tend to break up methods too much
+- You shouldn't break up a method unless it makes the overall system simpler
+- Each method should do one thing and do it completely
+### Split up methods
+- split by extracting a subtask
+    - make sense if the subtask is cleanly separable from the rest of the original method
+    - Typically, it means the child method is relatively general purpose
+- divide its functionality into two separate methods (rarely works)
+## Conclusion
+The decision to split or join should be based on complexity:
+- best information hiding
+- fewest dependencies
+- deepest interface
