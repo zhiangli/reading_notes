@@ -151,3 +151,26 @@ The decision to split or join should be based on complexity:
 - best information hiding
 - fewest dependencies
 - deepest interface
+
+# 10. Define Errors out of existence
+## Why exceptions add complexity
+An exception disrupts normal flow of the code; it usually means something didn't work as expected and an operation cannot be completed as planned.
+## Too many exceptions
+- if you are having trouble deal with exceptions, there's a good chance that caller won't know how to deal with it either.
+- exceptions thrown by a class are part of its interface.
+- throwing exception is easy but handling them is hard. Thus, the complexity comes from exception handling code
+## Ways to reduce exceptions
+### Define errors out of existence
+Overall, the best way to reduce bugs is to make software simpler
+### Mask exceptions
+- An exceptional condition is detected and handled at a low level in the system, so higher levels of software need to be aware of the condition
+- This is an example of pulling complexity downwards
+### Exception aggregation
+- Rather than writing distinct handlers for many individual exceptions, handle them all in one place with a single handler
+- Works best if an exception propagates several levels up the stack before it is handled; this allows more exceptions from more methods to be handled in the same place
+### Just crash
+- There will be certain errors that are not worth trying to handle
+
+# 11. Design it twice
+- After you have roughed out the designs for the alternatives, make a list of the pros and cons of each one
+- Design it twice principle can be applied at many levels in a system
