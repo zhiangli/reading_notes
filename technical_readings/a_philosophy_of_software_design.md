@@ -174,3 +174,41 @@ Overall, the best way to reduce bugs is to make software simpler
 # 11. Design it twice
 - After you have roughed out the designs for the alternatives, make a list of the pros and cons of each one
 - Design it twice principle can be applied at many levels in a system
+
+# 12. Why Write Comments? The Four Excuses
+The overall idea behind comments is to capture information that was in the mid of the designer but couldn't be represented in the code
+
+# 13. Comments Should Describe Things that Aren't Obvious from the Code
+## Pick conventions
+- Interface
+- Data structure member
+- Cross-module comment
+## Don't repeat the code
+## Lower-level comments add precision
+- Comments augment the code by providing information at a different level of detail
+- Comments at the same level as the code are likely to repeat the code
+- Precision is most useful when:
+    - class instance variables
+    - method arguments
+    - return values
+- Think nouns, not verbs. Focusing on what the variable represents, not how it is manipulated
+## Higher-level comments enhance intuition
+- Omit details and help the reader to understand the overall intent and structure of the code
+- Commonly used for
+    - inside methods
+    - interface comments
+- Step back from the details and think about a system at a higher level. Think about most fundamental characteristics
+## Interface documentation
+- Document the abstractions with comments
+- Interface comments provide information that some needs to know in order to use a class or method; they define the abstraction
+- Interface comment needs to include both higher-level information for abstraction and lower-level details for precision
+    - starts with a sentence or two describing the behavior -> high level abstraction
+    - describe each argument and return value -> precision
+    - side effects
+    - exceptions
+    - preconditions
+- Implementation documentation should go inside the method
+## Implementation comments: what and why, not how
+- The main goal of implementation comments is to help readers understand what the code is doing (not how it does it)
+- Also useful to explain why
+## Cross-module design decisions
