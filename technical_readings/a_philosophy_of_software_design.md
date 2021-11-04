@@ -212,3 +212,11 @@ The overall idea behind comments is to capture information that was in the mid o
 - The main goal of implementation comments is to help readers understand what the code is doing (not how it does it)
 - Also useful to explain why
 ## Cross-module design decisions
+
+# 14. Choosing Names
+- Names are a form of abstraction: they provide a simplified way of thinking about a more complex underlying entity
+- Two properties: precision & consistency
+- If you find it difficult to come up with a name, it suggests that the variable may not have a clear definition or purpose
+- Consistency: pick a name to use for that purpose and use the same name everywhere
+- Avoid extra words
+    - words that don't help to clarify the variable's meaning just add clutter
