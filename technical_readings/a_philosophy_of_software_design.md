@@ -220,3 +220,33 @@ The overall idea behind comments is to capture information that was in the mid o
 - Consistency: pick a name to use for that purpose and use the same name everywhere
 - Avoid extra words
     - words that don't help to clarify the variable's meaning just add clutter
+
+# 15. Write The Comments First
+Three benefits:
+- Better comments
+- Improves system design. Comments provide the only way to fully capture abstractions
+- Makes comment-writing more fun
+
+# 16. Modifying Existing Code
+## 16.1 Stay Strategic
+- Plan to spend a small fraction of its total effort on cleanup and refactoring
+## 16.2 Maintaining comments
+- Keep the comments near the code
+## 16.4 Maintaining comments
+- Avoid duplicationi
+
+# 17. Consistency
+- Consistency creates cognitive leverage
+## Examples of consistency
+- Names
+- Coding styles
+- Interfaces
+- Design patterns
+- Invariants
+## Ensuring consistency
+- Document
+- Enforce
+- When in Rome, do as the Romens do
+- Don't change existing conventions
+    - Having a better idea is not a sufficient enough excuse to introduce inconsistencies
+
