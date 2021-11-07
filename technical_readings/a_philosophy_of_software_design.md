@@ -233,7 +233,7 @@ Three benefits:
 ## 16.2 Maintaining comments
 - Keep the comments near the code
 ## 16.4 Maintaining comments
-- Avoid duplicationi
+- Avoid duplication
 
 # 17. Consistency
 - Consistency creates cognitive leverage
@@ -246,7 +246,33 @@ Three benefits:
 ## Ensuring consistency
 - Document
 - Enforce
-- When in Rome, do as the Romens do
+- When in Rome, do as the Romans do
 - Don't change existing conventions
     - Having a better idea is not a sufficient enough excuse to introduce inconsistencies
+
+# 18. Code Should be Obvious
+## Things that make code more obvious
+- Choosing good names
+- Consistency
+- Judicious use of while space
+- Comments
+## Things that make code less obvious
+- Event-driven programming
+- Generic containers(e.g. Pair in java)
+- Different types for declaration and allocation
+- Code that violates reader expectations
+## Conclusion
+To make code obvious:
+- reduce amount of information that is needed (use abstraction and eliminating special case)
+- leverage information readers have already acquired in other context
+- present the important information to them in the code
+
+# 19. Software Trends
+- Class hierarchies that use implementation inheritance extensively tend to have high complexity
+    - consider whether an approach based on composition can provide the same benefits
+    - high information within the class hierarchy
+- The increments of development should be abstractions, not features
+- Expose instance variables mean that part of the class's implementation is visible externally, which violates the idea of information hiding
+- Does the proposal really help minimize complexity in large software systems
+
 
