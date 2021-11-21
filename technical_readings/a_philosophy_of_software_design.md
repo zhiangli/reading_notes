@@ -264,7 +264,7 @@ Three benefits:
 ## Conclusion
 To make code obvious:
 - reduce amount of information that is needed (use abstraction and eliminating special case)
-- leverage information readers have already acquired in other context
+-leverage information readers have already acquired in other context
 - present the important information to them in the code
 
 # 19. Software Trends
@@ -275,4 +275,18 @@ To make code obvious:
 - Expose instance variables mean that part of the class's implementation is visible externally, which violates the idea of information hiding
 - Does the proposal really help minimize complexity in large software systems
 
+# 20. Designing for Performance
+## Design around the critical path
 
+# 21 Decide What Matters
+## How to decide what matters?
+- To decide what matters, look for leverage
+    - solution to one problem also allows many other problems to be solved
+## Minimize what matters
+- Try to make as little matter as possible: this will result in simpler systems
+- For things that do matter, try to minimize the number of places where they matter
+## Emphasize things that matter
+- Things don't matter should be de-emphasized
+## Mistakes
+- Treat too many things as important
+- Fail to recognize that something is something is important
